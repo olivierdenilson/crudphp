@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-12 col-md text-center">
             <img class="mb-2" src="../../assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-            <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+            <small class="d-block mb-3 text-muted">&copy; Todos os Direitos Resevados  <?php echo date('Y')?></small>
           </div>
         
        

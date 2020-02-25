@@ -2,8 +2,21 @@
       include_once('includes/conexao.php');
 ?>
 
+<div class="container">
 
-<h1> Lista de Usuário </h1>
+<h1> Listas -  Usuários </h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+            <th class="table-success" scope="col">Código</th>
+            <th class="table-success" scope="col">Nome</th>
+            <th class="table-success" scope="col">E-mail</th>
+            <th class="table-success" scope="col">Senha</th>
+            <th class="table-success" scope="col">Ações</th>
+    </tr>
+  </thead>
+
 
 <?php
     
@@ -11,17 +24,37 @@
      $result_usuarios = "SELECT * FROM usuarios";
      $resutado = mysqli_query($conn, $result_usuarios);
 
-     while($resultado = mysqli_fetch_assoc( $resutado)){
+     while($resultado = mysqli_fetch_assoc( $resutado))
+{?>
 
-        echo $resultado['id'] . "<br>";
-        echo $resultado['nome'] . "<br>";
-        echo $resultado['email'] . "<br>";
-        echo $resultado['senha'] . "<br> <hr>";
+<div>
+  <tbody>
+       <tr>
+            <th><?php echo $resultado['id'] ?> </th>
+            <td><?php echo $resultado['nome'] ?></td>
+            <td><?php echo $resultado['email'] ?></td>
+            <td><?php echo $resultado['senha'] ?></td>
+            <td><a class="btn btn-outline-info" href="#">Editar</a>  <a  class="btn btn-outline-danger" href="#">Excluir</a></td>
+    </tr>
 
-   }
+<?php } ?>
 
-?>
+</tbody>
+</table>
 
+
+<nav aria-label="Navegação de página exemplo">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+  </ul>
+</nav>
+
+
+</div>
 <?php include_once("includes/foot.php");?>
 
 

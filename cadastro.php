@@ -2,8 +2,6 @@
 
 <?php include_once("includes/head.php");?>
 
-<h1> Cadastro de Usuário </h1>
-
 <?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
@@ -11,33 +9,32 @@
 		}
 		?>
 
+
+<div class="container">
+<h1> Cadastro de Usuário </h1>
+
 <form method="POST" action="includes/processa.php">
+  <div class="form-group">
+    <label for="formGroupExampleInput">Nome:</label>
+    <input type="text" class="form-control" name="nome" placeholder="Seu Nome Completo">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">E-mail</label>
+    <input type="email" class="form-control" name="email" placeholder="Seu E-mail" require>
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Senha</label>
+    <input type="password" class="form-control" name="senha" placeholder="Senha">
+  </div>
 
-<label>Nome: </label>
-<input type="text" name="nome"  placeholder="Digite Seu nome completo">
-
-<label>E-mail: </label>
-<input type="email" name="email"  placeholder="Digite  Seu email">
-
-<label>Senha: </label>
-<input type="password" name="senha" placeholder="Digite sua Senha">
-
-<input type="submit" name="salvar" value="Cadastrar">
-
-<input type="reset" name="Limpar" value="Limpar">
+  <div class="form-group">
+  <button type="submit" class="btn btn-success" name="salvar" value="Cadastrar">Cadastrar</button>
+  <button type="reset" class="btn btn-secondary" name="salvar" value="Cadastrar">limpar</button>
+  </div>
 
 </form>
 
-<?php include_once("includes/foot.php");?>
-
-
-
-
-
-
-
-
-
+</div>
 
 
 
