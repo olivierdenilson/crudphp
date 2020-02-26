@@ -1,3 +1,7 @@
+<?php session_start(); ?>
+
+
+
 <?php include_once("includes/head.php");
       include_once('includes/conexao.php');
 ?>
@@ -40,6 +44,14 @@
 {?>
 
 
+<?php
+		if(isset($_SESSION['msg'])){
+			echo $_SESSION['msg'];
+			unset($_SESSION['msg']);
+		}
+    ?>
+    
+    
 <div>
   <tbody>
        <tr>
@@ -47,9 +59,14 @@
             <td><?php echo $resultado['nome'] ?></td>
             <td><?php echo $resultado['email'] ?></td>
             <td><?php echo $resultado['senha'] ?></td>
-            <td class="text-center"><a class="btn btn-outline-info" href="#">Editar</a>
+            <td class="text-center">
+              <a class="btn btn-outline-info" href="editar.php?id=<?php echo $resultado['id'] ?>">
+              Editar
+            </a>
             <a class="btn btn-outline-danger" href="#">Excluir</a>
-            <a class="btn btn-outline-dark" href="#">Visualizar</a>
+            <a class="btn btn-outline-dark" href="">Visualizar</a>
+
+            
           </td>
     </tr>
 
