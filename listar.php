@@ -6,6 +6,7 @@
 
 <h1> Listas -  Usuários </h1>
 
+
 <!--Estrutura da Tabela html -->
 <table class="table table-hover">
   <thead>
@@ -130,6 +131,12 @@
        <li class="page-item"><a class="page-link" href="listar.php?pagina=<?php echo $quantidade_pg;?>">Ultima</a></li>
   </ul>
 </nav>
+
+
+<div class="col-12 text-center">
+    <button class="btn btn-outline-success">Imprimir</button>
+    </div>
+
 </div>
 <?php include_once("includes/foot.php");?>
 
