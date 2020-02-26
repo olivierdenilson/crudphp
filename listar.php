@@ -51,7 +51,7 @@
 		}
     ?>
     
-    
+
 <div>
   <tbody>
        <tr>
@@ -63,8 +63,12 @@
               <a class="btn btn-outline-info" href="editar.php?id=<?php echo $resultado['id'] ?>">
               Editar
             </a>
-            <a class="btn btn-outline-danger" href="#">Excluir</a>
-            <a class="btn btn-outline-dark" href="">Visualizar</a>
+            <a class="btn btn-outline-danger" href="includes/proc_apagar.php?id=<?php echo $resultado['id'] ?>">
+              Excluir
+            </a>
+            <a class="btn btn-outline-dark" href="">
+              Visualizar
+            </a>
 
             
           </td>
