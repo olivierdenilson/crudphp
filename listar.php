@@ -19,7 +19,6 @@
     </tr>
   </thead>
 
-
 <?php
     
     // Receber o número da página
@@ -30,11 +29,12 @@
     $qnt_result_pg = 5;
     $inicio = ($qnt_result_pg * $pagina) - $qnt_result_pg;
 
-
      // trazendo os resultado do banco de dados
      $result_usuarios = "SELECT * FROM usuarios LIMIT $inicio, $qnt_result_pg";
+
      //execultando a instrução SQL
      $resutado = mysqli_query($conn, $result_usuarios);
+
     //percorrendo a linha no banco de dados 
      while($resultado = mysqli_fetch_assoc( $resutado))
 {?>
@@ -135,7 +135,7 @@
 
 <div class="col-12 text-center">
     <button class="btn btn-outline-success">Imprimir</button>
-    </div>
+  </div>
 
 </div>
 <?php include_once("includes/foot.php");?>
