@@ -66,7 +66,8 @@
             <a class="btn btn-outline-danger" href="includes/proc_apagar.php?id=<?php echo $resultado['id'] ?>">
               Excluir
             </a>
-            <a class="btn btn-outline-dark" href="">
+                        
+            <a class="btn btn-outline-dark" href="includes/proc_visualizar.php?id=<?php echo $resultado['id'] ?>">
               Visualizar
             </a>
 
