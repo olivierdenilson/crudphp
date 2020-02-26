@@ -10,11 +10,11 @@
 <table class="table table-hover">
   <thead>
     <tr>
-            <th class="table-success" scope="col">Código</th>
+            <th class="table-success text-center" scope="col">Código</th>
             <th class="table-success" scope="col">Nome</th>
             <th class="table-success" scope="col">E-mail</th>
             <th class="table-success" scope="col">Senha</th>
-            <th class="table-success" scope="col">Ações</th>
+            <th class="table-success text-center" scope="col">Ações</th>
     </tr>
   </thead>
 
@@ -42,12 +42,14 @@
 <div>
   <tbody>
        <tr>
-            <th><?php echo $resultado['id'] ?> </th>
+            <th class="text-center"><?php echo $resultado['id'] ?> </th>
             <td><?php echo $resultado['nome'] ?></td>
             <td><?php echo $resultado['email'] ?></td>
             <td><?php echo $resultado['senha'] ?></td>
-            <td><a class="btn btn-outline-info" href="#">Editar</a>
-            <a class="btn btn-outline-danger" href="#">Excluir</a></td>
+            <td class="text-center"><a class="btn btn-outline-info" href="#">Editar</a>
+            <a class="btn btn-outline-danger" href="#">Excluir</a>
+            <a class="btn btn-outline-dark" href="#">Visualizar</a>
+          </td>
     </tr>
 
 <?php } ?>
