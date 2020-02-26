@@ -156,7 +156,7 @@
 
 
 <div class="col-12 text-center">
-    <button class="btn btn-outline-success">Imprimir</button>
+    <a   class="btn btn-outline-success">Relatório Geral </a>
   </div>
 
 </div>

@@ -1,0 +1,50 @@
+<?php  include_once('conexao.php');?>
+
+<div class="container">
+
+<h1> Relatório Geral </h1>
+
+
+<!--Estrutura da Tabela html -->
+<table class="table table-hover">
+  <thead>
+    <tr>
+            
+            <th class="table-success" scope="col">Nome</th>
+            <th class="table-success" scope="col">E-mail</th>
+            <th class="table-success" scope="col">Senha</th>
+           
+    </tr>
+  </thead>
+
+<?php
+    
+      // trazendo os resultado do banco de dados
+     $result_usuarios = "SELECT * FROM usuarios order by nome ";
+
+     //execultando a instrução SQL
+     $resutado = mysqli_query($conn, $result_usuarios);
+
+    //percorrendo a linha no banco de dados 
+     while($resultado = mysqli_fetch_assoc( $resutado))
+{?>
+
+<div>
+  <tbody>
+       <tr>
+            
+            <td><?php echo $resultado['nome'] ?></td>
+            <td><?php echo $resultado['email'] ?></td>
+            <td><?php echo $resultado['senha'] ?></td>
+                     
+          </td>
+    </tr>
+
+<?php } ?>
+
+</tbody>
+</table>
+
+</div>
+
+
