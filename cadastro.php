@@ -2,6 +2,11 @@
 
 <?php include_once("includes/head.php");?>
 
+
+
+<div class="container">
+<h1> Cadastro de Usuário </h1>
+
 <?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
@@ -9,9 +14,6 @@
 		}
 		?>
 
-
-<div class="container">
-<h1> Cadastro de Usuário </h1>
 
 <form method="POST" action="includes/processa.php">
   <div class="form-group">
